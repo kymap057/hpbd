@@ -159,7 +159,11 @@
                         "+=1"); c.add(k, 0); gsap.globalTimeline.timeScale(1.5); k.vars.onComplete = function () { gsap.to('foreignObject', { opacity: 1 }); };
         })();
     </script>
-
+    <script>
+        setTimeout(() => {
+            console.log('This message is delayed by 3 seconds.');
+        }, 30000);
+    </script>
 </body>
 
 </html>
