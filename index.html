@@ -5,17 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy birth day Uyển Nhi!</title>
-    <link rel="stylesheet" href="./style.css">
+    <link id="styleLink" rel="stylesheet" href="./style.css">
+    <!-- <link rel="stylesheet" href="./card.css"> -->
     <meta http-equiv="refresh" content="30;url=">
 </head>
 
 <body>
     <canvas id=c></canvas>
+    <div class="card" id="card">
+		<div class="imgBox">
+			<div class="bark"></div>
+			<img src="./edited_lastofus.jpg">
+		</div>
+		<div class="details" style="display: none;">
+			<h4 class="color1">HAPPY BIRTHDAY!</h2>
+			<h4 class="color2 margin">Uyển Nhi (30.12)</h3>
+            <p>Sinh nhật vui vẻ nhé!</p> 
+            <p>Chúc mọi điều tốt đẹp nhất sẽ đến với bạn!</p>
+			<p class="text-right">Happy Birthday, Nhi♥</p>
+		</div>
+	</div>
     <script src="./script.js"></script>
     <script>
-        setTimeout(() => {
-            window.location.href = "https://kymap057.github.io/hpbd/card/card.html";
-        }, 15000);
+        window.onload = () => {
+            setTimeout(() => {
+                document.getElementById('c').style.display = 'none'; // Hide canvas
+                document.getElementById('card').style.display = 'block'; // Show card
+                document.getElementById('styleLink').href = './card.css';
+            }, 9000); // 5000ms = 5 seconds
+        };
     </script>
 </body>
 
